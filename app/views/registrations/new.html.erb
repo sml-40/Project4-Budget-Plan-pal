@@ -7,7 +7,7 @@
 <h1>User Registration Form</h1>
 
 <div class="container">
-<%= form_with url: register_path do |form| %>
+<%= form_with model: @user, url: register_path do |form| %>
   <%= form.label :first_name %>
   <%= form.text_field :first_name %>
 

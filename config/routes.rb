@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#destroy'
 
   get '/register', to: 'registrations#new'
+  post '/register', to: 'registrations#create'
 
+  resources :registrations, only: [:new, :create]
 
 end
