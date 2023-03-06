@@ -3,6 +3,6 @@ class CategoriesController < ApplicationController
   def index
     #Calling the model to get the data from the database.
     # makes the categories available to the view, so we can iterate over them, class instance variable.
-    @categories = Category.all
+    @categories = current_user.categories
   end
 end

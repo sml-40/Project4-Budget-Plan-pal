@@ -5,19 +5,19 @@
 <br>
 
 <h1>Dashboard</h1>
-<h1>Hello <%= @user.username %>!</h1>
+<h1>Hello <%= @user.first_name %>!</h1>
 
 <div class="container">
   <div class="dashboard">
   <% Category.all.each do |category| %>
     <div class="category">
       <h2><%= category.name %></h2>
-      <div class="expenses">
-      <% category.expenses.each do |expense| %>
+      <%# <div class="transactions"> %>
+      <%# <% category.transactions.each do |transaction| %> %>
      
-        <h3><%= expense.name %></h3>
-          <p><%= expense.amount %></p>
-          <p><%= expense.date %></p>
+        <%# <h3><%= transaction.name %></h3>
+          <%# <p><%= transaction.amount %></p> %>
+          <%# <p><%= transaction.date %></p> %> %>
             <% end %>
 
     </div>

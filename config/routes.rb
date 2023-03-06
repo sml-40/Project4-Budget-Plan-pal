@@ -23,8 +23,8 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'dashboard#index', as: :dashboard
 
   # get the categories route from the categories controller and the index action (this is the user's categories)
-  # nested resources for expenses under categories
+  # nested resources for transactions under categories
   resources :categories do
-    resources :expenses
+    resources :transactions
   end
   end
