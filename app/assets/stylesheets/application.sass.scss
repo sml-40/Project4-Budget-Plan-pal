@@ -1,19 +1,30 @@
 // Entry point for your Sass build
 // application.scss
 
-@import './navbar.sass.scss';
-@import './home.sass.scss';
+@import "./navbar.sass.scss";
+@import "./home.sass.scss";
 
 $primary-color: #16ddf3;
-$font-stack: 'Dosis', sans-serif;;
+$font-stack: "Dosis", sans-serif;
 
 body {
-  font: 100% $font-stack;
-  font-size: 20px;
-  padding: 0;
-  margin: 0;
-  background: #ffffff;
-  color: #333;
-  line-height: 1.4;
+	font: 100% $font-stack;
+	font-size: 20px;
+	padding: 0;
+	margin: 0;
+	background: #ffffff;
+	color: #333;
+	line-height: 1.4;
 }
 
+.alert {
+	padding: 20px;
+	background-color: #f44336;
+	color: white;
+}
+
+.notice {
+	padding: 20px;
+	background-color: #4caf50;
+	color: white;
+}
