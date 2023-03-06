@@ -3,6 +3,5 @@ class DashboardController < ApplicationController
     # fetch any necessary data for the dashboard
     @user = current_user
 
-    # render the dashboard view
   end
 end
