@@ -4,6 +4,7 @@
 <br>
 <br>
 <h1>User Login Form</h1>
+<div class="container">
 
 <%= form_with url: login_path do |form| %>
   <%= form.label :email %>
@@ -14,3 +15,6 @@
 
   <%= form.submit "Log in" %>
 <% end %>
+<br>
+<%= link_to "BACK TO HOME", "/" %>
+</div>

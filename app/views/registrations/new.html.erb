@@ -5,3 +5,29 @@
 <br>
 
 <h1>User Registration Form</h1>
+
+<div class="container">
+<%= form_with url: register_path do |form| %>
+  <%= form.label :first_name %>
+  <%= form.text_field :first_name %>
+
+  <%= form.label :last_name %>
+  <%= form.text_field :last_name %>
+
+  <%= form.label :email %>
+  <%= form.email_field :email %>
+
+  <%= form.label :username %>
+  <%= form.text_field :username %>
+
+  <%= form.label :password %>
+  <%= form.password_field :password %>
+
+  <%= form.label :password_confirmation %>
+  <%= form.password_field :password_confirmation %>
+
+  <%= form.submit "Register" %>
+<% end %>
+<br>
+<%= link_to "BACK TO HOME", "/" %>
+</div>
