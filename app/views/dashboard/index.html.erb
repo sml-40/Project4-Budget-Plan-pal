@@ -5,6 +5,22 @@
 <br>
 
 <h1>Dashboard</h1>
+<h1>Hello <%= @user.username %>!</h1>
 
 <div class="container">
-<h1>Hello <%= @user.username %>!</h1>
+  <div class="dashboard">
+  <% Category.all.each do |category| %>
+    <div class="category">
+      <h2><%= category.name %></h2>
+      <div class="expenses">
+      <% category.expenses.each do |expense| %>
+     
+        <h3><%= expense.name %></h3>
+          <p><%= expense.amount %></p>
+          <p><%= expense.date %></p>
+            <% end %>
+
+    </div>
+  <% end %>
+  </div>
+</div>

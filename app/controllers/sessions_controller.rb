@@ -1,8 +1,7 @@
 class SessionsController < ApplicationController
   def new
- #   render :new login form
- @user = User.new
-    
+    #   render :new login form
+    @user = User.new 
   end
 
   def create
@@ -18,7 +17,9 @@ class SessionsController < ApplicationController
   end
 
   def destroy
- #log user out
+    #log user out
+    session[:user_id] = nil
+    redirect_to login_path, notice: "You have been logged out."
   end
 
   private

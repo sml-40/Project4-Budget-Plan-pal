@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   # post the login route from the sessions controller and the create action
   post 'login', to: 'sessions#create'
   # get the logout route from the sessions controller and the destroy action
-  delete 'logout', to: 'sessions#destroy'
+  delete '/logout', to: 'sessions#destroy'
 
   # get the register route from the registrations controller and the new action
   get '/register', to: 'registrations#new'
@@ -27,7 +27,4 @@ Rails.application.routes.draw do
   resources :categories do
     resources :expenses
   end
-  
-
-
-end
+  end
