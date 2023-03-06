@@ -1,22 +1,29 @@
 class SessionsController < ApplicationController
   def new
  #   render :new login form
+ @user = User.new
     
   end
 
   def create
- #authenticate user and log them in
- user = User.find_by(email: params[:email])
- if user && user.authenticate(params[:password])
-   session[:user_id] = user.id
-   redirect_to dashboard_path, notice: "Logged in successfully"
- else
-   flash.now[:alert] = "Invalid email or password"
-   render :new
- end
+    # authenticate user and log them in
+    user = User.find_by(email: params[:session][:email])
+    if user && user.authenticate(params[:session][:password])
+      log_in user
+      redirect_to dashboard_path, notice: "Logged in!"
+    else
+      flash[:notice] = "Login is invalid!"
+      redirect_to login_path
+    end
   end
 
   def destroy
  #log user out
+  end
+
+  private
+
+  def log_in(user)
+    session[:user_id] = user.id
   end
 end

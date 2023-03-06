@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'pages/home'
+  get '/home', to: 'pages#home', as: 'home'
   root "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -13,9 +13,8 @@ Rails.application.routes.draw do
   post '/register', to: 'registrations#create'
 
   resources :registrations, only: [:new, :create]
-  resources :users, only: [:new, :create, :index, :show]
-
-  get '/dashboard', to: 'dashboard#index'
+  resources :sessions, only: [:new, :create, :destroy]
+  get '/dashboard', to: 'dashboard#index', as: :dashboard
 
 
 end

@@ -5,16 +5,22 @@
 <br>
 <h1>User Login Form</h1>
 <div class="container">
-
-<%= form_with url: login_path do |form| %>
-  <%= form.label :email %>
-  <%= form.email_field :email %>
-
-  <%= form.label :password %>
-  <%= form.password_field :password %>
-
-  <%= form.submit "Log in" %>
+<% if flash[:notice] %>
+  <%= content_tag :h1, flash[:notice] %>
+<% else %>
+  <%= content_tag :h1, "Please Log in" %>
 <% end %>
-<br>
-<%= link_to "BACK TO HOME", "/" %>
+
+  <%= form_for :session, url: login_path do |form| %>
+    <%= form.label :email %>
+    <%= form.email_field :email %>
+
+    <%= form.label :password %>
+    <%= form.password_field :password %>
+
+    <%= form.submit "Log in" %>
+  <% end %>
+
+  <br>
+  <%= link_to "BACK TO HOME", "/" %>
 </div>

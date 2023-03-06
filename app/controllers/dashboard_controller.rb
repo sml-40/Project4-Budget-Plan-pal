@@ -1,5 +1,8 @@
 class DashboardController < ApplicationController
   def index
-    @user = User.find(session[:user_id])
+    # fetch any necessary data for the dashboard
+    @user = current_user
+
+    # render the dashboard view
   end
 end
