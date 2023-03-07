@@ -31,7 +31,7 @@ class TransactionsController < ApplicationController
 
   def update
     if @transaction.update(transaction_params)
-      flash[:success] = "Transaction updated successfully!"
+      flash[:turbo_success] = "Transaction updated successfully!"
       redirect_to dashboard_path
     else
       # If the transaction fails to update, render the edit template again.
@@ -41,7 +41,7 @@ class TransactionsController < ApplicationController
 
   def destroy
     @transaction.destroy
-    flash[:success] = "Transaction deleted successfully!"
+    flash[:turbo_success] = "Transaction deleted successfully!"
     redirect_to dashboard_path
   end
 

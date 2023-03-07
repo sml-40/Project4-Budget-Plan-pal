@@ -2,6 +2,11 @@
 <html>
   <head>
     <title>BudgetPlannerApp</title>
+     <style>
+    .flash-message {
+      display: none;
+    }
+  </style>
 <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=M+PLUS+Rounded+1c:wght@100;300&family=Rubik:wght@300&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
@@ -14,11 +19,15 @@
   <body>
     <%= render "shared/navbar" %>  
 
+     <div class="flash-container">
+    <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>"><%= value %></div>
+    <% end %>
 
     <%= yield %>
 
     <script>
-    
+
     var nav = document.getElementById('navlist');
 
     function toggleNav () {       

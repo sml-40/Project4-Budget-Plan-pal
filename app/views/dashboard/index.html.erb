@@ -3,12 +3,12 @@
 <br>
 <br>
 <br>
-<div class="container">
+<div class="profile-container">
 <h1>Dashboard</h1>
 <h1>Hello <%= @user.first_name %>!</h1>
 <button><%= link_to "Add", transactions_path %></button>
 </div>
-<div class="container">
+<div class="">
 <div class="transaction-list">
   <% @transactions.each do |transaction| %>
     <div class="transaction">
