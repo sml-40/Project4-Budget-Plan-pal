@@ -22,9 +22,6 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   get '/dashboard', to: 'dashboard#index', as: :dashboard
 
-  # get the categories route from the categories controller and the index action (this is the user's categories)
-  # nested resources for transactions under categories
-  resources :categories do
-    resources :transactions
-  end
+  # get the transactions route from the transactions controller and the index action  
+  resources :transactions
   end

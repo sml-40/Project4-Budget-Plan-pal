@@ -1,6 +1,5 @@
 class User < ApplicationRecord
   has_many :transactions, dependent: :destroy
-  has_many :categories, dependent: :destroy
 
   has_secure_password
 
