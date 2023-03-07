@@ -6,21 +6,15 @@
 
 <h1>Dashboard</h1>
 <h1>Hello <%= @user.first_name %>!</h1>
-
+<button><%= link_to "Add", categories_path %></button>
 <div class="container">
-  <div class="dashboard">
-  <% Category.all.each do |category| %>
-    <div class="category">
-      <h2><%= category.name %></h2>
-      <div class="transactions">
-      <% category.transactions.each do |transaction| %>
-     
-        <h3><%= transaction.title %></h3>
-         <p><%= transaction.amount %></p>
-          <p><%= transaction.transaction_date %></p>
-      <% end %>
-
+<div class="transaction-list">
+  <% @transactions.each do |transaction| %>
+    <div class="transaction">
+      <h3><%= transaction.title %></h3>
+      <p><%= number_to_currency(transaction.amount) %></p>
+      <p><%= transaction.transaction_date %></p>
     </div>
   <% end %>
-  </div>
+</div>
 </div>
