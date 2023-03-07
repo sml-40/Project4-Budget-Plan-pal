@@ -37,7 +37,7 @@
 
   <div class="field">
     <%= f.label :category %>
-    <%= f.select :category, options_for_select(["Groceries", "Travel", "Food", "Entertainment", "Housing", "Transportation", "Personal Care", "Education", "Health/fitness", "Miscellaneous"]), {}, class: 'form-control' %>
+    <%= f.select :category, Transaction::CATEGORIES, {}, class: 'form-control' %>
   </div>
 
   <div class="actions">
