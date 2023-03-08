@@ -1,4 +1,8 @@
 class SessionsController < ApplicationController
+  def show
+    @user = current_user
+  end
+
   def new
     #   render :new login form
     @user = User.new 

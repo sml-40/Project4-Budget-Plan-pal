@@ -24,4 +24,10 @@ Rails.application.routes.draw do
 
   # get the transactions route from the transactions controller and the index action  
   resources :transactions
+  # get the users route from the users controller and the index action
+  resources :users, only: [:show, :destroy]
+  get '/profile', to: 'registrations#show'
+  delete '/profile', to: 'registrations#destroy'
+
+
   end
