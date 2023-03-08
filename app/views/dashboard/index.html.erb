@@ -3,8 +3,10 @@
 <br>
 <br>
 <br>
+
 <div class="profile-container">
-<h1>Hello <%= @user.first_name %>!</h1>
+<h1 class="profile-icon"><i class="fa-regular fa-user fa-2xl"></i> Hello <%= @user.first_name %>!</h1>
+
 <button><%= link_to "Add a new transaction", transactions_path, style: "text-decoration: none" %></button>
 </div>
 <div class="transaction-list">
