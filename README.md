@@ -30,7 +30,13 @@ A helpful way to track your expenses
 ## Technology
 
 - Full stack Ruby on Rails
-- PostgreSQL
+- PostgreSQL for database
+- Devise for authentication
+- CSS/SASS for styling
+- Figma for wireframes
+- Canva for logo styling
+- Awesome Fonts for styling icons
+
 
 ## User Stories
 
