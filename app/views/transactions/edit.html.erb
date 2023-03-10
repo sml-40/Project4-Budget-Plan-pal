@@ -11,7 +11,7 @@
   <%= form.date_field :transaction_date %>
 
   <%= form.label :category %>
-  <%= form.select :category, Transaction::CATEGORIES %>
+  <%= form.select :category, Transaction::CATEGORIES.map{|cat| [cat[:name], cat[:name]]} %>
 
   <%= form.submit "Update Transaction" %>
 <% end %>

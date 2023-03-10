@@ -1,0 +1,19 @@
+.user-profile-container {
+  width: 80%;
+  height: 20%;
+  margin: 0 auto;
+  background-color: rgb(52, 156, 235);
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 12px rgb(123, 166, 176);
+  border: rgb(112, 189, 251) solid 3px;
+  color: white;
+  .user-profile-icon {
+    text-align: center;
+  }
+  .user-profile-icon:hover {
+    cursor: pointer;
+    color: #000;
+  }
+}

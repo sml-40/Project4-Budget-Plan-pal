@@ -3,11 +3,9 @@
 <br>
 <br>
 <br>
-
-
+<div class="container">
 <h1>New Transaction</h1>
 
-<div class="container">
 <%= form_for @transaction do |f| %>
   <% if @transaction.errors.any? %>
     <div id="error_explanation">
@@ -37,8 +35,10 @@
 
   <div class="field">
     <%= f.label :category %>
-    <%= f.select :category, Transaction::CATEGORIES, {}, class: 'form-control' %>
+    <%= f.select :category, Transaction::CATEGORIES.map{|cat| [cat[:name], cat[:name]]}, {}, class: 'form-control' %>
   </div>
+  <br>
+  <br>
 
   <div class="actions">
     <%= f.submit "Create Transaction" %>

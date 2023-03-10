@@ -13,8 +13,8 @@ class RegistrationsController < ApplicationController
       flash[:success] = "Your account has been created successfully."
       redirect_to login_path
     else
-      render :new
-    end
+      flash[:error] = @user.errors.full_messages.join(", ")
+      render :new    end
   end
 
   def destroy

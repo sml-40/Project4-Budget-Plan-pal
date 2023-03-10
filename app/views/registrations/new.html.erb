@@ -1,12 +1,19 @@
 <br>
-<br>
-<br>
-<br>
-<br>
+<% if flash[:error] %>
+  <div class="alert alert-danger">
+    <%= flash[:error] %>
+  </div>
+<% end %>
 
-<h1>User Registration Form</h1>
+<% if flash[:notice] %>
+  <div class="alert alert-success">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
 
-<div class="container">
+<div class="profile-container">
+<h1>Register for an account</h1>
+
 <%= form_with model: @user, url: register_path do |form| %>
   <%= form.label :first_name %>
   <%= form.text_field :first_name %>
@@ -19,7 +26,7 @@
 
   <%= form.label :username %>
   <%= form.text_field :username %>
-
+<br><br>
   <%= form.label :password %>
   <%= form.password_field :password %>
 
@@ -29,5 +36,5 @@
   <%= form.submit "Register" %>
 <% end %>
 <br>
-<%= link_to "BACK TO HOME", "/" %>
+<%= link_to "BACK TO HOME", "/", style: "color: black; text-decoration: none;" %>
 </div>

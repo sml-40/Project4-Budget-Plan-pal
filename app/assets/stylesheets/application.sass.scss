@@ -4,6 +4,7 @@
 @import "./navbar.sass.scss";
 @import "./home.sass.scss";
 @import "./dashboard.sass.scss";
+@import "./profile.sass.scss";
 
 $primary-color: #16ddf3;
 $font-stack: "Dosis", sans-serif;
@@ -13,7 +14,7 @@ body {
 	font-size: 20px;
 	padding: 0;
 	margin: 0;
-	background: #ffffff;
+	background-color: rgb(210, 235, 252);
 	color: #333;
 	line-height: 1.4;
 }
@@ -28,4 +29,28 @@ body {
 	padding: 20px;
 	background-color: #4caf50;
 	color: white;
+}
+
+.profile-container {
+	width: 80%;
+	height: 20%;
+	margin: 0 auto;
+	background-color: rgb(52, 156, 235);
+	text-align: center;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 10px 10px 12px rgb(123, 166, 176);
+	border: rgb(112, 189, 251) solid 3px;
+	color: white;
+	.profile-icon {
+		text-align: left;
+	}
+	.profile-icon:hover {
+		cursor: pointer;
+		color: #000;
+	}
+}
+
+h1 {
+	text-align: center;
 }

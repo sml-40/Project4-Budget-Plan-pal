@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=M+PLUS+Rounded+1c:wght@100;300&family=Rubik:wght@300&display=swap");
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: #16ddf3;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  z-index: 999;
+  box-shadow: 5px 5px 12px 5px rgb(123, 166, 176);
+}
+.navbar .logo-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 50px;
+  width: 50px;
+  margin: 0 10px;
+  padding: 0;
+}
+
+.logo {
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 20px;
+}
+
+.menu {
+  display: flex;
+  justify-items: flex-end;
+  list-style: none;
+  margin-left: 250px;
+  padding: 0;
+}
+
+.menu li {
+  margin: 0 1rem;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.menu li a:hover {
+  color: rgb(161, 255, 230);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: auto;
+  margin: auto;
+}
+
+.box {
+  display: flex;
+  justify-content: space-around;
+  border: rgb(161, 255, 230);
+  width: 300px;
+  border-radius: 10px;
+  margin-left: 30px;
+}
+
+.box:hover {
+  border: 1px solid rgb(180, 236, 253);
+}
+
+.container {
+  width: 80%;
+  height: 50%;
+  margin: 0 auto;
+  margin-top: 100px;
+  background-color: rgb(196, 231, 237);
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+.container .text-1 {
+  margin-top: 15px;
+  color: black;
+  font-size: 70px;
+  font-weight: bold;
+}
+.container .text-2 {
+  margin-bottom: 20px;
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+}
+.container .text-3 {
+  margin-top: 20px;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.btn {
+  height: 80px;
+  background-color: #16ddf3;
+  color: white;
+  padding: 10px 40px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin: auto;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: rgb(64, 193, 199);
+}
+
+.btn-log {
+  margin-right: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+}
+
+.btn-reg {
+  border-top-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.btn-log a {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-log a:hover {
+  color: #ccc;
+}
+
+.btn-reg a {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-reg a:hover {
+  color: #ccc;
+}
+
+.profile-container {
+  width: 80%;
+  height: 20%;
+  margin: 0 auto;
+  background-color: rgb(52, 156, 235);
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 12px rgb(123, 166, 176);
+  border: rgb(112, 189, 251) solid 3px;
+  color: white;
+}
+.profile-container .profile-icon {
+  text-align: left;
+}
+.profile-container .profile-icon:hover {
+  cursor: pointer;
+  color: #000;
+}
+
+.transaction {
+  width: 60%;
+  height: 150px;
+  margin: 0 auto;
+  margin-top: 70px;
+  background-color: rgb(237, 248, 255);
+  text-align: center;
+  padding: 20px;
+  box-shadow: 10px 10px 12px rgb(76, 222, 255);
+  text-decoration: none;
+  border: rgb(52, 156, 235) solid 1px;
+  color: black;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+}
+
+.transaction-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.category-icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  float: left;
+}
+
+.category-div {
+  width: 200px;
+  text-align: left;
+}
+
+.amount-div {
+  color: red;
+  font-weight: bold;
+  text-align: right;
+}
+
+.title {
+  text-transform: capitalize;
+}
+
+.date {
+  margin: 0;
+  font-size: 16px;
+  color: #999;
+}
+
+.actions {
+  float: right;
+  text-decoration: none;
+}
+
+.user-profile-container {
+  width: 80%;
+  height: 20%;
+  margin: 0 auto;
+  background-color: rgb(52, 156, 235);
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 12px rgb(123, 166, 176);
+  border: rgb(112, 189, 251) solid 3px;
+  color: white;
+}
+.user-profile-container .user-profile-icon {
+  text-align: center;
+}
+.user-profile-container .user-profile-icon:hover {
+  cursor: pointer;
+  color: #000;
+}
+
+body {
+  font: 100% "Dosis", sans-serif;
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+  background-color: rgb(210, 235, 252);
+  color: #333;
+  line-height: 1.4;
+}
+
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
+
+.notice {
+  padding: 20px;
+  background-color: #4caf50;
+  color: white;
+}
+
+.profile-container {
+  width: 80%;
+  height: 20%;
+  margin: 0 auto;
+  background-color: rgb(52, 156, 235);
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 12px rgb(123, 166, 176);
+  border: rgb(112, 189, 251) solid 3px;
+  color: white;
+}
+.profile-container .profile-icon {
+  text-align: left;
+}
+.profile-container .profile-icon:hover {
+  cursor: pointer;
+  color: #000;
+}
+
+h1 {
+  text-align: center;
+}/*# sourceMappingURL=application.sass.css.map */
