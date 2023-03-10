@@ -31,6 +31,11 @@ A helpful way to track your expenses
 
 - Full stack Ruby on Rails
 - PostgreSQL
+- Devise
+- CSS/SASS
+- Figma/Canva
+- Awesome Fonts
+
 
 ## User Stories
 
