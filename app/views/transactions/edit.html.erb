@@ -11,7 +11,7 @@
   <%= form.date_field :transaction_date %>
 
   <%= form.label :category %>
-  <%= form.select :category %>
+  <%= form.select :category, options_for_select(["Groceries", "Travel", "Food", "Entertainment", "Housing", "Transportation", "Personal Care", "Education", "Health/fitness", "Miscellaneous"]), {}, class: 'form-control' %>
 
   <%= form.submit "Update Transaction" %>
 <% end %>

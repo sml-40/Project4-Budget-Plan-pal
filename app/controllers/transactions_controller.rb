@@ -25,7 +25,7 @@ class TransactionsController < ApplicationController
       redirect_to dashboard_path
     else
       # If the transaction fails to save, render the new template again.
-      render 'new'
+      render 'index'
     end
   end
 
@@ -52,6 +52,6 @@ class TransactionsController < ApplicationController
   end
 
   def transaction_params
-    params.require(:transaction).permit(:title, :amount, :transaction_date)
+    params.require(:transaction).permit(:title, :amount, :transaction_date, :category)
   end
 end
