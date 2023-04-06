@@ -175,10 +175,34 @@ In Rails, the Model-View-Controller (MVC) architecture is used to organise code 
  
  <img width="1134" alt="ruby transaction" src="https://user-images.githubusercontent.com/114579141/230342125-e56f33ed-52cb-4ab5-91ad-be0cd8c89794.png">
 
+ - To style the data into a specific layout, I assigned CSS classes to each data element and then used SASS to format the elements according to their respective classes. 
 
+<img width="344" alt="ruby sass" src="https://user-images.githubusercontent.com/114579141/230342306-a8b41dcf-58df-44f9-8769-31a92781c947.png">
 
+## Wins
 
+ - Styling ✨ - I am really proud of how nicely the styling of the app turned out to be. It felt really rewarding to have created my design on Figma and actually having achieved the aesthetics through SASS. 
+ - Building a full-stack app in 5 days - I found that creating an app on Ruby on Rails was a joy due to its simplicity. The framework provided straightforward steps for creating each webpage, from defining controllers and views to setting up routes. This made the development process much smoother and more efficient, allowing me to focus on building out the core features of my application and the styling.
 
+## Key Learnings
  
+ - I was surprised by how simple it was to create a full stack Rails app in such a short space of time.
+ - Rails has simplified the development process greatly, especially in handling sensitive user data like passwords:
+    - As shown in the dummy examples from the PostgreSQL database, when a password is stored, it is filtered out for security reasons. This means that even if someone gains access to the database, they will not be able to view the actual passwords of users:
+
+<img width="436" alt="db examples" src="https://user-images.githubusercontent.com/114579141/230343502-59b0808d-1978-4605-86fc-6c7c98d58cb8.png">
+
+ - I felt that compared to other full-stack frameworks like MERN, Rails took care of a lot of the server-side work for me, making it easier and quicker to build web applications. 
+ - I was also glad to have used SASS for the styling, it was a big change to Bootstrap, but felt like I had more control over how I wanted the app to look.
  
+## Bugs
+ 
+ - When deploying over to the live site through Heroku, one of the models did not migrate over properly, meaning that I do not have full use of the site. I am still working to find a fix for this and will update with the solution soon.
+ 
+## Future Improvements
+
+ - In the future, I plan to add some additional features to the application. One idea is to allow the user to set a budget at the top of their transactions list, and have the budget update dynamically as they add expenses. 
+ - Additionally, I would like to integrate a third-party banking API, which would enable the user to view their accounts and expenditure.
+
+
  
