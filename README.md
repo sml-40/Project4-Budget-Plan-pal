@@ -128,5 +128,20 @@ I then seeded the database with 5 dummy users and created some transactions for 
 
 ![seeds](https://user-images.githubusercontent.com/114579141/230336728-29c8bd19-e7cf-4b5c-9cc0-693c53845635.png)
 
+### Models and Controllers
 
+In Rails, the Model-View-Controller (MVC) architecture is used to organise code and separate different concerns in the application. Models are responsible for handling data and interacting with the database. From the app/models directory, here is the User model in my application:
+ 
+![user](https://user-images.githubusercontent.com/114579141/230337362-ef317fa0-d335-497e-9518-a973e6ec74cc.png)
+
+
+ - This model represents a user of my application and contains various attributes such as first name, last name, email, and password. 
+ - The ‘has_many :transactions’ association indicates that a user can have multiple transactions.
+ - The ‘dependent: :destroy’ option ensures that when a user is deleted, all of their associated transactions are also deleted.
+
+ - Here is a code snippet from my sessions controller:
+ 
+ 
+ 
+ 
  
