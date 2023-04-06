@@ -31,6 +31,7 @@ To access and run the code for this project, follow these steps:
 - CSS/SASS for styling
 - Figma for wireframes
 - Canva for logo styling
+- SmartDraw for ERD
 - Awesome Fonts for styling icons
 
 ## Brief
