@@ -141,7 +141,44 @@ In Rails, the Model-View-Controller (MVC) architecture is used to organise code 
 
  - Here is a code snippet from my sessions controller:
  
+ ![sessions controller](https://user-images.githubusercontent.com/114579141/230337855-6f06db96-3523-49f1-856b-4047522734fa.png)
+
+ - The controller classes  handle the incoming requests from the user and direct them to the appropriate model to retrieve and manipulate data.
+ - In my example above, the SessionsController is responsible for managing user sessions, which allows users to log in and log out of the application. 
+ - The create action handles user authentication by finding the user based on the email provided, checking if the password is correct, and logging the user in if successful:
  
+![bpp app](https://user-images.githubusercontent.com/114579141/230339690-9975536f-7874-420e-8f02-de0b06f48864.png)
+
+ - If the authentication fails, the user is redirected back to the login page with a notice. 
+ - The destroy action logs the user out by clearing the user's session ID and redirecting them to the login page with a notice that they have been logged out.
+
+### Routes
+ - The config/routes.rb file is where the incoming HTTP requests are mapped to the controller actions.
+ - This is where I defined the route for the transactions that maps to the TransactionController and the defined routes for the user that maps to the UsersController:
+ 
+![bpp routes](https://user-images.githubusercontent.com/114579141/230340507-ba627ba3-ce1b-4024-96dc-3d1d531cc78d.png)
+ 
+ - The resources method provides a shortcut for defining all the CRUD (create, read, update, delete) routes for a particular resource. For example, the resources :transactions line creates all the necessary routes for the transactions resource, including the index, new, create, show, edit, update, and destroy actions.
+ - In addition to resources, I also defined custom routes using the get, post, put, patch, and delete methods. For example, the get '/profile', to: 'registrations#show' and delete '/profile', to: 'registrations#destroy' lines define custom routes for the registration resource.
+ - I used the :only option to be used with resources to limit the routes that are generated. For example, the resources :users, only: [:show, :destroy] line creates only the show and destroy actions for the users resource.
+ - I used the rails routes -E command to view the routes as it helped to see which routes were available and helped when troubleshooting and also understanding how the application routes are organised:
+ 
+<img width="360" alt="rails routes -e" src="https://user-images.githubusercontent.com/114579141/230341575-6101b2fe-2818-44fb-8f3c-d1a715c2837f.png">
+ 
+## Challenges
+
+ - It was initially challenging to render the transaction data onto the page in a readable and visually appealing manner, where the title, transaction category and date would sit in the correct positions on the left hand side of the element and the cost, plus the edit and delete buttons would sit on the right:
+
+![bpp trans](https://user-images.githubusercontent.com/114579141/230341886-3e1168d2-5c5e-49c3-8d21-179e1daaf861.png)
+
+ - To achieve this, I utilised a loop to iterate through each transaction, retrieving certain data points for display:
+ 
+ <img width="1134" alt="ruby transaction" src="https://user-images.githubusercontent.com/114579141/230342125-e56f33ed-52cb-4ab5-91ad-be0cd8c89794.png">
+
+
+
+
+
  
  
  
